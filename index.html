@@ -1,0 +1,55 @@
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <ol>
+      <li>mis</li>
+      <li>zaba</li>
+      <li>serce</li>
+    </ol>
+    <ol>
+      <li>czerw</li>
+      <li>ziel</li>
+      <li>zolty</li>
+    </ol>
+    podaj kształt<input type="number" max="3" min="1" default="1" id="ks" />
+    <button id="but1">zamow</button>
+    <p></p>
+    Podaj RGB: R<input type="number" id="R" />g<input type="number" id="G" />
+    b<input type="number" id="B" />
+    <button id="but2">kolor</button>
+    <script>
+      const ksztalt = document.querySelector("#ks");
+      const r = document.querySelector("#R");
+      const g = document.querySelector("#G");
+      const b = document.querySelector("#B");
+      const but = document.querySelector("#but1");
+      const p = document.querySelector("p");
+      const but2 = document.querySelector("#but2");
+      but.addEventListener("click", function () {
+        if (ksztalt.value == 1) {
+          p.innerHTML = "Zamowiles ksztalt: mis";
+        }
+        if (ksztalt.value == 2) {
+          p.innerHTML = "Zamowiles ksztalt: zabka";
+        }
+        if (ksztalt.value == 3) {
+          p.innerHTML = "Zamowiles ksztalt: serce";
+        }
+        but2.style =
+          "background-color: rgb(" +
+          r.value + 
+          "," +
+          g.value +
+          "," +
+          b.value +
+          ");";
+      });
+    </script>
+  </body>
+</html>
